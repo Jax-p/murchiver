@@ -5,11 +5,16 @@ const glob = require("glob");
 
 const IGNORE_LIST_FILENAME = '.murchiver_ignore';
 
-const loadIgnoreFile = () =>
-     fs.readFileSync(process.cwd() + `/.${IGNORE_LIST_FILENAME}`)
-         .toString()
-         .replace(/^(?=\n)$|^\s*|\s*$|\n\n+/gm, "")
-         .split('\n')
+const loadIgnoreFile = () => {
+    try {
+        return fs.readFileSync(process.cwd() + `/${IGNORE_LIST_FILENAME}`)
+            .toString()
+            .replace(/^(?=\n)$|^\s*|\s*$|\n\n+/gm, "")
+            .split('\n')
+    } catch (err) {
+        return [];
+    }
+}
 
 const zipDirectories = (ignoreList) => {
     glob("*/", {ignore: ignoreList},  (err, directories) => {
