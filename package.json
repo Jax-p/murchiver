@@ -1,0 +1,23 @@
+{
+  "name": "murchiver",
+  "version": "0.1.0",
+  "description": "Zip all directories in current path with support for ignoring specific folders and files",
+  "main": "index.js",
+  "bin": {
+    "murchiver": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": ["zip","multiple zip","archive"],
+  "author": "Jakub <Jax> Patočka",
+  "license": "ISC",
+  "dependencies": {
+    "archiver": "^5.1.0",
+    "glob": "^7.1.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jax-p/murchiver"
+  }
+}
