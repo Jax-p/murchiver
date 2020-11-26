@@ -1,6 +1,6 @@
 {
   "name": "murchiver",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Zip all directories in current path with support for ignoring specific folders and files",
   "main": "index.js",
   "bin": {
